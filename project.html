@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project — Sanjana Gondaliya</title>
+  <meta name="description" content="Project case study by Sanjana Gondaliya." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="projects">
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;color:inherit">
+        <span class="avatar avatar--sm">SG</span>
+        <span>Sanjana Gondaliya</span>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <a href="index.html" class="profile" style="text-decoration:none">
+          <span class="avatar">SG</span>
+          <div class="profile__meta">
+            <h1 class="profile__name">Sanjana Gondaliya</h1>
+            <p class="profile__role">UI/UX Designer</p>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html#home" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="projects.html" class="nav__link is-active">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+            <span>Projects</span>
+          </a>
+          <a href="services.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            <span>Services</span>
+          </a>
+          <a href="contact.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+            <span>Contact</span>
+          </a>
+        </nav>
+
+        <p class="nav__heading">Resources</p>
+        <nav class="nav nav--secondary" aria-label="Resources">
+          <a href="https://www.linkedin.com/in/sanjana-gondaliya-984a4a1a5/" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 9h3v11H4zM5.5 4.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 9h3v1.6c.5-.9 1.6-1.8 3.3-1.8 3 0 3.7 1.8 3.7 4.6V20h-3v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20h-3z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="stack.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4zM4 12l8 4 8-4M4 16l8 4 8-4"/></svg>
+            <span>Stack</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" stroke-width="2"/></svg>
+            <span>Twitter</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar__bottom">
+        <div class="locale-card">
+          <div class="locale-card__date" id="liveDate">—</div>
+          <div class="locale-card__loc">Surat, India</div>
+        </div>
+        <a href="contact.html" class="btn btn--block btn--light">
+          <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download CV
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+      <section class="section section--wide" id="projectDetail">
+        <a href="projects.html" class="back-link reveal">
+          <svg viewBox="0 0 24 24"><path d="M9 14l-4-4 4-4M5 10h9a5 5 0 010 10h-1"/></svg>
+          Back
+        </a>
+
+        <h2 class="detail__title reveal" id="pdTitle">Loading…</h2>
+        <div class="detail__meta reveal" id="pdMeta"></div>
+
+        <div class="detail__visual reveal" id="pdVisual">
+          <span class="project-card__mono" id="pdMono"></span>
+        </div>
+
+        <div class="detail__content reveal">
+          <h3>Overview</h3>
+          <p id="pdOverview"></p>
+          <h3>Results</h3>
+          <p id="pdResults"></p>
+        </div>
+
+        <div class="detail__nav reveal">
+          <a href="contact.html" class="btn btn--light">
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+            Start a project
+          </a>
+          <a href="projects.html" class="btn">All projects</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/project-detail.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

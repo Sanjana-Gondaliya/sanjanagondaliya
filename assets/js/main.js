@@ -79,7 +79,7 @@
 
   /* ---------- Active nav highlight ---------- */
   const navLinks = document.querySelectorAll('.nav__link[data-section]');
-  const sections = ['home', 'work', 'services', 'contact']
+  const sections = ['home']
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
@@ -114,6 +114,129 @@
       if (!sidebar.contains(e.target) && !toggle.contains(e.target)) closeMenu();
     });
   }
+
+  /* ---------- Featured work carousel ---------- */
+  const rail = document.getElementById('workRail');
+  const prevBtn = document.getElementById('workPrev');
+  const nextBtn = document.getElementById('workNext');
+  if (rail && prevBtn && nextBtn) {
+    const stepSize = () => {
+      const card = rail.querySelector('.project-card');
+      return card ? card.getBoundingClientRect().width + 22 : rail.clientWidth * 0.8;
+    };
+    const behavior = reduceMotion ? 'auto' : 'smooth';
+
+    function updateArrows() {
+      const max = rail.scrollWidth - rail.clientWidth - 4;
+      prevBtn.classList.toggle('is-hidden', rail.scrollLeft <= 4);
+      nextBtn.classList.toggle('is-hidden', rail.scrollLeft >= max);
+    }
+    prevBtn.addEventListener('click', () => rail.scrollBy({ left: -stepSize(), behavior }));
+    nextBtn.addEventListener('click', () => rail.scrollBy({ left: stepSize(), behavior }));
+    rail.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+
+    /* drag / swipe to scroll */
+    let down = false, startX = 0, startScroll = 0, moved = false;
+    rail.addEventListener('pointerdown', (e) => {
+      down = true; moved = false;
+      startX = e.clientX; startScroll = rail.scrollLeft;
+      rail.classList.add('is-dragging');
+    });
+    rail.addEventListener('pointermove', (e) => {
+      if (!down) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      rail.scrollLeft = startScroll - dx;
+    });
+    function endDrag() {
+      if (!down) return;
+      down = false;
+      rail.classList.remove('is-dragging');
+    }
+    rail.addEventListener('pointerup', endDrag);
+    rail.addEventListener('pointercancel', endDrag);
+    rail.addEventListener('pointerleave', endDrag);
+    /* prevent accidental navigation after a drag */
+    rail.addEventListener('click', (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    /* click a card -> open its detail page */
+    rail.addEventListener('click', (e) => {
+      if (moved) return;
+      const card = e.target.closest('.project-card');
+      if (card && card.dataset.id) window.location.href = 'project.html?id=' + card.dataset.id;
+    });
+  }
+
+  /* ---------- 3D tilt + pop on cards ---------- */
+  const tiltCards = document.querySelectorAll('.price-card, .custom-card');
+  if (tiltCards.length && !reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+    const MAX = 9; // max tilt in degrees
+    tiltCards.forEach(card => {
+      card.addEventListener('pointerenter', () => {
+        // override the slow .reveal transition so the tilt tracks the cursor
+        card.style.transition = 'transform .08s ease-out, box-shadow .35s';
+      });
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          'perspective(850px) rotateX(' + (-py * MAX).toFixed(2) + 'deg) rotateY(' +
+          (px * MAX).toFixed(2) + 'deg) translateY(-8px) scale(1.03)';
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.transition = 'transform .5s ease, box-shadow .35s';
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* ---------- Contact form (mailto) ---------- */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(contactForm);
+      const name = (data.get('name') || '').toString().trim();
+      const company = (data.get('company') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
+      if (!name || !message) {
+        contactForm.reportValidity();
+        return;
+      }
+      const subject = 'Project inquiry from ' + name + (company ? ' (' + company + ')' : '');
+      const body = message + '\n\n— ' + name + (company ? ', ' + company : '');
+      const note = document.getElementById('formNote');
+      if (note) note.hidden = false;
+      window.location.href = 'mailto:gondaliyasanjana@gmail.com?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const q = item.querySelector('.faq-item__q');
+    const a = item.querySelector('.faq-item__a');
+    if (!q || !a) return;
+    q.addEventListener('click', () => {
+      const willOpen = !item.classList.contains('is-open');
+      faqItems.forEach(other => {
+        other.classList.remove('is-open');
+        const oq = other.querySelector('.faq-item__q');
+        const oa = other.querySelector('.faq-item__a');
+        if (oq) oq.setAttribute('aria-expanded', 'false');
+        if (oa) oa.style.maxHeight = '0px';
+      });
+      if (willOpen) {
+        item.classList.add('is-open');
+        q.setAttribute('aria-expanded', 'true');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
 
   /* ---------- Animated starfield ---------- */
   const canvas = document.getElementById('stars');

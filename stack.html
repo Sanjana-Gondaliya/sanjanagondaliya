@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stack — Sanjana Gondaliya</title>
+  <meta name="description" content="The tools & technologies Sanjana Gondaliya uses every day." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="stack">
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;color:inherit">
+        <span class="avatar avatar--sm">SG</span>
+        <span>Sanjana Gondaliya</span>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <a href="index.html" class="profile" style="text-decoration:none">
+          <span class="avatar">SG</span>
+          <div class="profile__meta">
+            <h1 class="profile__name">Sanjana Gondaliya</h1>
+            <p class="profile__role">UI/UX Designer</p>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html#home" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="projects.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+            <span>Projects</span>
+          </a>
+          <a href="services.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            <span>Services</span>
+          </a>
+          <a href="contact.html" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+            <span>Contact</span>
+          </a>
+        </nav>
+
+        <p class="nav__heading">Resources</p>
+        <nav class="nav nav--secondary" aria-label="Resources">
+          <a href="https://www.linkedin.com/in/sanjana-gondaliya-984a4a1a5/" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 9h3v11H4zM5.5 4.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 9h3v1.6c.5-.9 1.6-1.8 3.3-1.8 3 0 3.7 1.8 3.7 4.6V20h-3v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20h-3z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="stack.html" class="nav__link is-active">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4zM4 12l8 4 8-4M4 16l8 4 8-4"/></svg>
+            <span>Stack</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" stroke-width="2"/></svg>
+            <span>Twitter</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar__bottom">
+        <div class="locale-card">
+          <div class="locale-card__date" id="liveDate">—</div>
+          <div class="locale-card__loc">Surat, India</div>
+        </div>
+        <a href="contact.html" class="btn btn--block btn--light">
+          <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download CV
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+      <section class="section section--wide">
+        <div class="page-head reveal">
+          <h2 class="section__title">My toolbox</h2>
+          <p class="section__sub">The tools and technologies that power my work, every step of the way.</p>
+        </div>
+
+        <div class="tool-grid">
+          <a class="tool-card reveal" href="https://www.figma.com" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:linear-gradient(135deg,#a259ff,#f24e1e)">Fi</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Figma</span>
+              <span class="tool-card__cat">Product design</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://www.framer.com" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#111">Fr</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Framer</span>
+              <span class="tool-card__cat">Web design</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#001e36;color:#31a8ff">Ps</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Photoshop</span>
+              <span class="tool-card__cat">Photo editing</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#330000;color:#ff9a00">Ai</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Illustrator</span>
+              <span class="tool-card__cat">Vector design</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://spline.design" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:conic-gradient(from 180deg,#ff7eb3,#7afcff,#feff9c,#ff7eb3)">3D</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Spline</span>
+              <span class="tool-card__cat">3D design</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://webflow.com" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#4353ff">W</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Webflow</span>
+              <span class="tool-card__cat">No-code web</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#00005b;color:#9999ff">Ae</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">After Effects</span>
+              <span class="tool-card__cat">Motion design</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+
+          <a class="tool-card reveal" href="https://www.notion.so" target="_blank" rel="noopener">
+            <span class="tool-card__icon" style="background:#fff;color:#111">N</span>
+            <span class="tool-card__text">
+              <span class="tool-card__name">Notion</span>
+              <span class="tool-card__cat">Docs &amp; planning</span>
+            </span>
+            <span class="tool-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

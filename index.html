@@ -51,15 +51,15 @@
             <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9"/></svg>
             <span>Home</span>
           </a>
-          <a href="#work" class="nav__link" data-section="work">
+          <a href="projects.html" class="nav__link">
             <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
             <span>Projects</span>
           </a>
-          <a href="#services" class="nav__link" data-section="services">
+          <a href="services.html" class="nav__link">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
             <span>Services</span>
           </a>
-          <a href="#contact" class="nav__link" data-section="contact">
+          <a href="contact.html" class="nav__link">
             <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
             <span>Contact</span>
           </a>
@@ -71,7 +71,7 @@
             <svg viewBox="0 0 24 24"><path d="M4 9h3v11H4zM5.5 4.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 9h3v1.6c.5-.9 1.6-1.8 3.3-1.8 3 0 3.7 1.8 3.7 4.6V20h-3v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20h-3z"/></svg>
             <span>LinkedIn</span>
           </a>
-          <a href="#stack" class="nav__link" data-section="stack">
+          <a href="stack.html" class="nav__link">
             <svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4zM4 12l8 4 8-4M4 16l8 4 8-4"/></svg>
             <span>Stack</span>
           </a>
@@ -87,7 +87,7 @@
           <div class="locale-card__date" id="liveDate">—</div>
           <div class="locale-card__loc">Surat, India</div>
         </div>
-        <a href="#contact" class="btn btn--block btn--light">
+        <a href="contact.html" class="btn btn--block btn--light">
           <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           Download CV
         </a>
@@ -123,7 +123,7 @@
           </p>
 
           <div class="hero__actions reveal" data-delay="3">
-            <a href="#contact" class="btn btn--cta">
+            <a href="contact.html" class="btn btn--cta">
               <svg viewBox="0 0 24 24" class="btn__icon"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
               Contact me
             </a>
@@ -140,133 +140,152 @@
       </section>
 
       <!-- WORK -->
-      <section id="work" class="section">
-        <div class="section__head reveal">
-          <span class="eyebrow">Selected Work</span>
-          <h2 class="section__title">Take a look at my best works.</h2>
+      <section id="work" class="section section--wide">
+        <div class="work-head reveal">
+          <h2 class="section__title">Featured work</h2>
+          <a href="projects.html" class="work-head__all">
+            All projects
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card reveal" data-accent="violet">
-            <div class="work-card__visual"><span class="work-card__mono">JC</span></div>
-            <div class="work-card__body">
-              <h3>JamesClear.com</h3>
-              <p>Personal brand and website design for the New York Times bestselling author, James Clear.</p>
-              <span class="work-card__tags">Branding · Web Design</span>
-            </div>
-          </article>
+        <div class="carousel reveal">
+          <button class="carousel__btn carousel__btn--prev is-hidden" id="workPrev" aria-label="Scroll left">
+            <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
 
-          <article class="work-card reveal" data-accent="blue">
-            <div class="work-card__visual"><span class="work-card__mono">SE</span></div>
-            <div class="work-card__body">
-              <h3>SeniorExecutive.com</h3>
-              <p>Creative direction, branding, and a complete website design system for SeniorExecutive.com.</p>
-              <span class="work-card__tags">Design System · Branding</span>
-            </div>
-          </article>
+          <div class="work-rail" id="workRail">
+            <article class="project-card" data-accent="violet" data-id="jamesclear">
+              <div class="project-card__visual"><img class="card-photo" src="assets/img/jamesclear.jpg" alt="JamesClear.com" loading="lazy" onerror="this.remove()"><span class="project-card__mono">JC</span></div>
+              <div class="project-card__body">
+                <div class="project-card__top">
+                  <h3>JamesClear.com</h3>
+                  <span class="project-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </div>
+                <div class="project-card__meta">
+                  <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 7a3 3 0 010 6M21 20c0-2-1-3.5-3-4.2"/></svg> Personal Brand</span>
+                  <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg> 2023</span>
+                </div>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-accent="amber">
-            <div class="work-card__visual"><span class="work-card__mono">EX</span></div>
-            <div class="work-card__body">
-              <h3>JoinExec.com</h3>
-              <p>Creative direction, branding, website design, and mobile app design for EXEC.</p>
-              <span class="work-card__tags">Mobile App · Web</span>
-            </div>
-          </article>
+            <article class="project-card" data-accent="blue" data-id="seniorexecutive">
+              <div class="project-card__visual"><img class="card-photo" src="assets/img/seniorexecutive.jpg" alt="SeniorExecutive.com" loading="lazy" onerror="this.remove()"><span class="project-card__mono">SE</span></div>
+              <div class="project-card__body">
+                <div class="project-card__top">
+                  <h3>SeniorExecutive.com</h3>
+                  <span class="project-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </div>
+                <div class="project-card__meta">
+                  <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 7a3 3 0 010 6M21 20c0-2-1-3.5-3-4.2"/></svg> Design System</span>
+                  <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg> 2023-2024</span>
+                </div>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-accent="green">
-            <div class="work-card__visual"><span class="work-card__mono">AM</span></div>
-            <div class="work-card__body">
-              <h3>AwesomeMotive.com</h3>
-              <p>A complete website redesign for one of the leading software companies in the world.</p>
-              <span class="work-card__tags">Redesign · Web</span>
-            </div>
-          </article>
+            <article class="project-card" data-accent="amber" data-id="joinexec">
+              <div class="project-card__visual"><img class="card-photo" src="assets/img/joinexec.jpg" alt="JoinExec.com" loading="lazy" onerror="this.remove()"><span class="project-card__mono">EX</span></div>
+              <div class="project-card__body">
+                <div class="project-card__top">
+                  <h3>JoinExec.com</h3>
+                  <span class="project-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </div>
+                <div class="project-card__meta">
+                  <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 7a3 3 0 010 6M21 20c0-2-1-3.5-3-4.2"/></svg> Branding · App</span>
+                  <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg> 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-accent="green" data-id="awesomemotive">
+              <div class="project-card__visual"><img class="card-photo" src="assets/img/awesomemotive.jpg" alt="AwesomeMotive.com" loading="lazy" onerror="this.remove()"><span class="project-card__mono">AM</span></div>
+              <div class="project-card__body">
+                <div class="project-card__top">
+                  <h3>AwesomeMotive.com</h3>
+                  <span class="project-card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </div>
+                <div class="project-card__meta">
+                  <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 7a3 3 0 010 6M21 20c0-2-1-3.5-3-4.2"/></svg> Web Redesign</span>
+                  <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg> 2024</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" id="workNext" aria-label="Scroll right">
+            <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </section>
 
-      <!-- SERVICES -->
-      <section id="services" class="section">
-        <div class="section__head reveal">
-          <span class="eyebrow">What I Offer</span>
-          <h2 class="section__title">A full-service offering.</h2>
-          <p class="section__sub">Close collaboration, quick delivery. Unlimited revisions and design
-            requests through a lean, founder-friendly process.</p>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <span class="service-card__no">01</span>
-            <h3>Product Design</h3>
-            <p>Bring your vision to life with innovative, user-focused solutions that drive market success and differentiate your product.</p>
-          </article>
-          <article class="service-card reveal" data-delay="1">
-            <span class="service-card__no">02</span>
-            <h3>Mobile App Design</h3>
-            <p>Turn ideas into user-friendly experiences with apps that engage and delight your audience.</p>
-          </article>
-          <article class="service-card reveal" data-delay="2">
-            <span class="service-card__no">03</span>
-            <h3>Landing Pages</h3>
-            <p>Professionally designed landing pages that convert visitors into loyal customers and grow your business.</p>
-          </article>
-          <article class="service-card reveal" data-delay="3">
-            <span class="service-card__no">04</span>
-            <h3>Design Systems</h3>
-            <p>Consistent, scalable, and visually stunning design systems that elevate your brand's potential.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
+      <!-- WHO I AM -->
       <section id="about" class="section">
-        <div class="section__head reveal">
-          <span class="eyebrow">About Me</span>
-          <h2 class="section__title">Hello, I'm Sanjana.</h2>
+        <div class="whoami-head reveal">
+          <span class="whoami-head__label">Who I am</span>
+          <a href="services.html" class="whoami-head__offer">
+            What I offer
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
         </div>
 
-        <div class="about reveal">
-          <div class="about__text">
-            <p>I'm dedicated to helping ambitious founders launch impactful products through beautiful and usable design. Since beginning my design career in 2018, I've helped over 30 companies launch, grow, and get funded.</p>
-            <p>The products I've designed have reached millions of people and earned millions of dollars for my clients. Besides working with companies, I share design content on social media — tips, advice, and thought-provoking essays that challenge the status quo.</p>
-            <p>Today, I'm driven to work with high-performance teams. I believe small details matter; even when they go unnoticed, they add up. Attention to detail is my core virtue.</p>
+        <div class="whoami-text reveal">
+          <p>Hey, I'm Sanjana — a UI/UX &amp; product designer with a knack for creating
+            meaningful, user-friendly designs. Since 2018 I've helped
+            <a href="projects.html">30+ companies</a> launch, grow, and get funded, with
+            products that have reached millions of people.</p>
+
+          <p>I've crafted brand &amp; web design for bestselling author
+            <a href="project.html?id=jamesclear">James Clear</a>, a complete
+            <a href="project.html?id=seniorexecutive">design system for SeniorExecutive</a>,
+            and product &amp; mobile app design for
+            <a href="project.html?id=joinexec">EXEC</a> — always focusing on branding and UX.</p>
+
+          <p>I believe small details matter; even when they go unnoticed, they add up.
+            Attention to detail is my core virtue — and I'm
+            <a href="services.html">ready to make your next project</a> both functional
+            and memorable.</p>
+        </div>
+
+        <div class="exp-list reveal">
+          <div class="exp-row">
+            <span class="exp-row__co"><span class="exp-row__icon" style="background:#3b82f6">IN</span> Independent</span>
+            <span class="exp-row__meta"><span class="exp-row__role">UI/UX Designer</span><span class="exp-row__year">2021–NOW</span></span>
           </div>
-        </div>
-
-        <div id="stack" class="stack reveal">
-          <p class="stack__label">In my work I use…</p>
-          <div class="stack__tags">
-            <span>Figma</span><span>Framer</span><span>Photoshop</span><span>Illustrator</span>
-            <span>Webflow</span><span>Notion</span><span>Spline</span><span>After Effects</span>
+          <div class="exp-row">
+            <span class="exp-row__co"><span class="exp-row__icon" style="background:#22c55e">AM</span> Awesome Motive</span>
+            <span class="exp-row__meta"><span class="exp-row__role">Product Designer</span><span class="exp-row__year">2023–2024</span></span>
+          </div>
+          <div class="exp-row">
+            <span class="exp-row__co"><span class="exp-row__icon" style="background:#f59e0b">EX</span> EXEC</span>
+            <span class="exp-row__meta"><span class="exp-row__role">Product &amp; App Designer</span><span class="exp-row__year">2022–2023</span></span>
+          </div>
+          <div class="exp-row">
+            <span class="exp-row__co"><span class="exp-row__icon" style="background:#0ea5e9">SE</span> SeniorExecutive</span>
+            <span class="exp-row__meta"><span class="exp-row__role">Design Systems</span><span class="exp-row__year">2020–2022</span></span>
+          </div>
+          <div class="exp-row">
+            <span class="exp-row__co"><span class="exp-row__icon" style="background:#a855f7">JC</span> JamesClear</span>
+            <span class="exp-row__meta"><span class="exp-row__role">Brand &amp; Web Designer</span><span class="exp-row__year">2018–2020</span></span>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section">
+      <!-- CTA strip -->
+      <section class="section">
         <div class="cta reveal">
-          <span class="eyebrow">Let's Talk</span>
           <h2 class="cta__title">Ready to start a project?</h2>
           <p class="cta__sub">I can help your brand amplify trust, credibility, and human-centricity with a seamless website experience.</p>
-
           <div class="cta__actions">
-            <a href="mailto:gondaliyasanjana@gmail.com" class="btn btn--light btn--lg">
+            <a href="contact.html" class="btn btn--light btn--lg">
               <svg viewBox="0 0 24 24" class="btn__icon"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
-              gondaliyasanjana@gmail.com
+              Get in touch
             </a>
-          </div>
-
-          <div class="cta__social">
-            <a href="https://www.linkedin.com/in/sanjana-gondaliya-984a4a1a5/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
-            <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a>
           </div>
         </div>
 
         <footer class="footer">
           <span>© <span id="year">2026</span> Sanjana Gondaliya</span>
-          <span>Designed & built with care · India 🌍 Worldwide</span>
+          <span>Designed &amp; built with care · India 🌍 Worldwide</span>
         </footer>
       </section>
     </main>
