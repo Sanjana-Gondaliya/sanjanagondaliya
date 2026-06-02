@@ -19,8 +19,8 @@
       });
     }
     if (dateEl) {
-      dateEl.textContent = now.toLocaleDateString('en-GB', {
-        day: '2-digit', month: 'short', year: 'numeric'
+      dateEl.textContent = now.toLocaleDateString('en-US', {
+        day: 'numeric', month: 'numeric', year: 'numeric'
       });
     }
   }

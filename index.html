@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -44,7 +44,6 @@
             <h1 class="profile__name">Sanjana Gondaliya</h1>
             <p class="profile__role">UI/UX Designer</p>
           </div>
-          <span class="status-dot" title="Available for work"></span>
         </div>
 
         <nav class="nav" aria-label="Primary">
@@ -86,11 +85,9 @@
       <div class="sidebar__bottom">
         <div class="locale-card">
           <div class="locale-card__date" id="liveDate">—</div>
-          <div class="locale-card__loc">
-            <span class="globe">🌍</span> Based in India · Worldwide
-          </div>
+          <div class="locale-card__loc">Surat, India</div>
         </div>
-        <a href="#contact" class="btn btn--block">
+        <a href="#contact" class="btn btn--block btn--light">
           <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           Download CV
         </a>
@@ -101,37 +98,40 @@
     <main class="main">
       <!-- HERO -->
       <section id="home" class="section hero">
-        <div class="reveal hero__badge">
-          <span class="avatar avatar--xs">JC</span>
-          <span>“Working with Sanjana was everything you could wish for.”</span>
+        <div class="sky" aria-hidden="true">
+          <span class="meteor"></span>
+          <span class="meteor"></span>
+          <span class="meteor"></span>
+          <span class="meteor"></span>
+          <span class="meteor"></span>
+          <span class="meteor"></span>
+        </div>
+        <div class="hero__inner">
+          <div class="reveal hero__badge">
+            <span class="badge-avatar">JC</span>
+            <span>Trusted by 30+ founders to ship designs that convert.</span>
+          </div>
+
+          <h2 class="hero__title reveal" data-delay="1">
+            I'm Sanjana, transforming ideas into
+            <span class="grad">beautiful, usable digital products.</span>
+          </h2>
+
+          <p class="hero__lead reveal" data-delay="2">
+            I specialize in creating visually stunning designs that leave a
+            lasting impression.
+          </p>
+
+          <div class="hero__actions reveal" data-delay="3">
+            <a href="#contact" class="btn btn--cta">
+              <svg viewBox="0 0 24 24" class="btn__icon"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+              Contact me
+            </a>
+            <span class="hero__time" id="liveClock">10:59 AM</span>
+          </div>
         </div>
 
-        <h2 class="hero__title reveal" data-delay="1">
-          Transforming ideas into
-          <span class="grad">beautiful, usable</span>
-          digital products.
-        </h2>
-
-        <p class="hero__lead reveal" data-delay="2">
-          I'm Sanjana — a UI/UX Designer from India. Clients reach out when they need
-          exceptional quality design, delivered blazingly fast.
-        </p>
-
-        <div class="hero__actions reveal" data-delay="3">
-          <a href="#contact" class="btn btn--primary">
-            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
-            Book a Free Discovery Call
-          </a>
-          <span class="hero__time" id="liveClock">10:34 AM</span>
-        </div>
-
-        <div class="hero__stats reveal" data-delay="4">
-          <div class="stat"><span class="stat__num" data-count="30">0</span><span class="stat__label">Companies launched</span></div>
-          <div class="stat"><span class="stat__num" data-count="7">0</span><span class="stat__label">Years of craft</span></div>
-          <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span><span class="stat__label">Client satisfaction</span></div>
-        </div>
-
-        <div class="trusted reveal" data-delay="5">
+        <div class="trusted reveal" data-delay="4">
           <p class="trusted__label">Trusted by the best</p>
           <div class="trusted__logos">
             <span>JamesClear</span><span>SeniorExecutive</span><span>EXEC</span><span>AwesomeMotive</span>
@@ -250,7 +250,7 @@
           <p class="cta__sub">I can help your brand amplify trust, credibility, and human-centricity with a seamless website experience.</p>
 
           <div class="cta__actions">
-            <a href="mailto:gondaliyasanjana@gmail.com" class="btn btn--primary btn--lg">
+            <a href="mailto:gondaliyasanjana@gmail.com" class="btn btn--light btn--lg">
               <svg viewBox="0 0 24 24" class="btn__icon"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
               gondaliyasanjana@gmail.com
             </a>
