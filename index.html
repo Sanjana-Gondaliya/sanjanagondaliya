@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanjana Gondaliya — UI/UX Designer</title>
+  <meta name="description" content="Sanjana Gondaliya — UI/UX Designer from India. Crafting beautiful, usable digital products for ambitious founders." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sanjana Gondaliya — UI/UX Designer" />
+  <meta property="og:description" content="Crafting beautiful, usable digital products for ambitious founders." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Animated starfield background -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="avatar avatar--sm">SG</span>
+      <span>Sanjana Gondaliya</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <div class="profile">
+          <span class="avatar">SG</span>
+          <div class="profile__meta">
+            <h1 class="profile__name">Sanjana Gondaliya</h1>
+            <p class="profile__role">UI/UX Designer</p>
+          </div>
+          <span class="status-dot" title="Available for work"></span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#home" class="nav__link is-active" data-section="home">
+            <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="#work" class="nav__link" data-section="work">
+            <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+            <span>Projects</span>
+          </a>
+          <a href="#services" class="nav__link" data-section="services">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            <span>Services</span>
+          </a>
+          <a href="#contact" class="nav__link" data-section="contact">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+            <span>Contact</span>
+          </a>
+        </nav>
+
+        <p class="nav__heading">Resources</p>
+        <nav class="nav nav--secondary" aria-label="Resources">
+          <a href="https://www.linkedin.com/in/sanjana-gondaliya-984a4a1a5/" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 9h3v11H4zM5.5 4.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 9h3v1.6c.5-.9 1.6-1.8 3.3-1.8 3 0 3.7 1.8 3.7 4.6V20h-3v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20h-3z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#stack" class="nav__link" data-section="stack">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4zM4 12l8 4 8-4M4 16l8 4 8-4"/></svg>
+            <span>Stack</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="nav__link">
+            <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" stroke-width="2"/></svg>
+            <span>Twitter</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar__bottom">
+        <div class="locale-card">
+          <div class="locale-card__date" id="liveDate">—</div>
+          <div class="locale-card__loc">
+            <span class="globe">🌍</span> Based in India · Worldwide
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--block">
+          <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download CV
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+      <!-- HERO -->
+      <section id="home" class="section hero">
+        <div class="reveal hero__badge">
+          <span class="avatar avatar--xs">JC</span>
+          <span>“Working with Sanjana was everything you could wish for.”</span>
+        </div>
+
+        <h2 class="hero__title reveal" data-delay="1">
+          Transforming ideas into
+          <span class="grad">beautiful, usable</span>
+          digital products.
+        </h2>
+
+        <p class="hero__lead reveal" data-delay="2">
+          I'm Sanjana — a UI/UX Designer from India. Clients reach out when they need
+          exceptional quality design, delivered blazingly fast.
+        </p>
+
+        <div class="hero__actions reveal" data-delay="3">
+          <a href="#contact" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+            Book a Free Discovery Call
+          </a>
+          <span class="hero__time" id="liveClock">10:34 AM</span>
+        </div>
+
+        <div class="hero__stats reveal" data-delay="4">
+          <div class="stat"><span class="stat__num" data-count="30">0</span><span class="stat__label">Companies launched</span></div>
+          <div class="stat"><span class="stat__num" data-count="7">0</span><span class="stat__label">Years of craft</span></div>
+          <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span><span class="stat__label">Client satisfaction</span></div>
+        </div>
+
+        <div class="trusted reveal" data-delay="5">
+          <p class="trusted__label">Trusted by the best</p>
+          <div class="trusted__logos">
+            <span>JamesClear</span><span>SeniorExecutive</span><span>EXEC</span><span>AwesomeMotive</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="section__head reveal">
+          <span class="eyebrow">Selected Work</span>
+          <h2 class="section__title">Take a look at my best works.</h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal" data-accent="violet">
+            <div class="work-card__visual"><span class="work-card__mono">JC</span></div>
+            <div class="work-card__body">
+              <h3>JamesClear.com</h3>
+              <p>Personal brand and website design for the New York Times bestselling author, James Clear.</p>
+              <span class="work-card__tags">Branding · Web Design</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-accent="blue">
+            <div class="work-card__visual"><span class="work-card__mono">SE</span></div>
+            <div class="work-card__body">
+              <h3>SeniorExecutive.com</h3>
+              <p>Creative direction, branding, and a complete website design system for SeniorExecutive.com.</p>
+              <span class="work-card__tags">Design System · Branding</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-accent="amber">
+            <div class="work-card__visual"><span class="work-card__mono">EX</span></div>
+            <div class="work-card__body">
+              <h3>JoinExec.com</h3>
+              <p>Creative direction, branding, website design, and mobile app design for EXEC.</p>
+              <span class="work-card__tags">Mobile App · Web</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-accent="green">
+            <div class="work-card__visual"><span class="work-card__mono">AM</span></div>
+            <div class="work-card__body">
+              <h3>AwesomeMotive.com</h3>
+              <p>A complete website redesign for one of the leading software companies in the world.</p>
+              <span class="work-card__tags">Redesign · Web</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="section__head reveal">
+          <span class="eyebrow">What I Offer</span>
+          <h2 class="section__title">A full-service offering.</h2>
+          <p class="section__sub">Close collaboration, quick delivery. Unlimited revisions and design
+            requests through a lean, founder-friendly process.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-card__no">01</span>
+            <h3>Product Design</h3>
+            <p>Bring your vision to life with innovative, user-focused solutions that drive market success and differentiate your product.</p>
+          </article>
+          <article class="service-card reveal" data-delay="1">
+            <span class="service-card__no">02</span>
+            <h3>Mobile App Design</h3>
+            <p>Turn ideas into user-friendly experiences with apps that engage and delight your audience.</p>
+          </article>
+          <article class="service-card reveal" data-delay="2">
+            <span class="service-card__no">03</span>
+            <h3>Landing Pages</h3>
+            <p>Professionally designed landing pages that convert visitors into loyal customers and grow your business.</p>
+          </article>
+          <article class="service-card reveal" data-delay="3">
+            <span class="service-card__no">04</span>
+            <h3>Design Systems</h3>
+            <p>Consistent, scalable, and visually stunning design systems that elevate your brand's potential.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="section__head reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section__title">Hello, I'm Sanjana.</h2>
+        </div>
+
+        <div class="about reveal">
+          <div class="about__text">
+            <p>I'm dedicated to helping ambitious founders launch impactful products through beautiful and usable design. Since beginning my design career in 2018, I've helped over 30 companies launch, grow, and get funded.</p>
+            <p>The products I've designed have reached millions of people and earned millions of dollars for my clients. Besides working with companies, I share design content on social media — tips, advice, and thought-provoking essays that challenge the status quo.</p>
+            <p>Today, I'm driven to work with high-performance teams. I believe small details matter; even when they go unnoticed, they add up. Attention to detail is my core virtue.</p>
+          </div>
+        </div>
+
+        <div id="stack" class="stack reveal">
+          <p class="stack__label">In my work I use…</p>
+          <div class="stack__tags">
+            <span>Figma</span><span>Framer</span><span>Photoshop</span><span>Illustrator</span>
+            <span>Webflow</span><span>Notion</span><span>Spline</span><span>After Effects</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="cta reveal">
+          <span class="eyebrow">Let's Talk</span>
+          <h2 class="cta__title">Ready to start a project?</h2>
+          <p class="cta__sub">I can help your brand amplify trust, credibility, and human-centricity with a seamless website experience.</p>
+
+          <div class="cta__actions">
+            <a href="mailto:gondaliyasanjana@gmail.com" class="btn btn--primary btn--lg">
+              <svg viewBox="0 0 24 24" class="btn__icon"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+              gondaliyasanjana@gmail.com
+            </a>
+          </div>
+
+          <div class="cta__social">
+            <a href="https://www.linkedin.com/in/sanjana-gondaliya-984a4a1a5/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+            <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span>© <span id="year">2026</span> Sanjana Gondaliya</span>
+          <span>Designed & built with care · India 🌍 Worldwide</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
